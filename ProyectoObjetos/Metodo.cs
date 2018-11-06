@@ -5,14 +5,11 @@ using System.Text;
 
 namespace ProyectoObjetos
 {
-        class Metodo
+    public class Metodo
     {
-        Departamento departamento = new Departamento();
-        Ciudad ciudad = new Ciudad();
-        Barrio barrio = new Barrio();
-        Persona persona = new Persona();
-    
-        List<Departamento> departamentos= new List <Departamento>();
+
+
+        List<Departamento> departamentos = new List<Departamento>();
         List<Ciudad> ciudades = new List<Ciudad>();
         List<Barrio> barrios = new List<Barrio>();
         List<Persona> personas = new List<Persona>();
@@ -21,7 +18,7 @@ namespace ProyectoObjetos
 
         public void AgregarDepartamento(String nombre, String capital, int poblacion)
         {
-            Departamento nuevoDepartamento = new Departamento(nombre, capital,poblacion);
+            Departamento nuevoDepartamento = new Departamento(nombre, capital, poblacion);
             departamentos.Add(nuevoDepartamento);
 
         }
@@ -39,10 +36,10 @@ namespace ProyectoObjetos
             barrios.Add(nuevoBarrio);
 
         }
-    
+
         public void AgregarPersona(String nombre, String profesion, int edad)
         {
-            Persona nuevaPersona= new Persona(nombre, profesion, edad);
+            Persona nuevaPersona = new Persona(nombre, profesion, edad);
             personas.Add(nuevaPersona);
 
         }
@@ -65,7 +62,7 @@ namespace ProyectoObjetos
 
         }
         public void EliminarPersona(Persona persona)
-        {   
+        {
             personas.Remove(persona);
 
         }
