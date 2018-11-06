@@ -6,8 +6,8 @@ namespace ProyectoObjetos
 {
     class Persona
     {
-        private String nombre;
-        private String profesion;
-        private int edad;
+        private String nombre { get; set; }
+        private String profesion { get; set; }
+        private int edad { get; set; }
     }
 }
