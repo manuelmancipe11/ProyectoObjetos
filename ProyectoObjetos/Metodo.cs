@@ -44,28 +44,84 @@ namespace ProyectoObjetos
 
         }
 
-        public void EliminarDepartamento(Departamento departamento)
+        public void EliminarDepartamento(int indexD)
         {
-            departamentos.Remove(departamento);
+
+            departamentos.RemoveAt(indexD);
 
         }
 
-        public void EliminarCiudad(Ciudad ciudad)
+        public void EliminarCiudad(int indexC)
         {
-            ciudades.Remove(ciudad);
+            ciudades.RemoveAt(indexC);
 
         }
 
-        public void EliminarBarrio(Barrio barrio)
+        public void EliminarBarrio(int indexB)
         {
-            barrios.Remove(barrio);
+            barrios.RemoveAt(indexB);
 
         }
-        public void EliminarPersona(Persona persona)
+        public void EliminarPersona(int indexP)
         {
-            personas.Remove(persona);
+            personas.RemoveAt(indexP);
 
         }
 
+        public void VerDepartamentos()
+        {
+            for (int i = 0; i <= departamentos.Count; i++)
+            {
+               Console.WriteLine(i+". "+departamentos[i]);
+
+            }
+
+        }
+
+        public void Verciudades()
+        {
+            for (int i = 0; i <= ciudades.Count; i++)
+            {
+                Console.WriteLine(ciudades[i]);
+
+            }
+
+        }
+
+        public void VerBarrios()
+        {
+            for (int i = 0; i <= barrios.Count; i++)
+            {
+                Console.WriteLine(barrios[i]);
+
+            }
+
+        }
+
+        public void VerPersonas()
+        {
+            for (int i = 0; i <= personas.Count; i++)
+            {
+                Console.WriteLine(personas[i]);
+
+            }
+
+        }
+
+        public int MostrarPrimerMenu()
+        {
+            Console.WriteLine(@"Hola: que deseas hacer?
+                1. Ver Dertamentos
+                2. Ver Ciudades
+                3. Ver Barrios
+                4. Ver Barrios");
+            int opc = int.Parse(Console.ReadLine());
+
+            return opc;
+            
+        }
+
+
+        
     }
 }

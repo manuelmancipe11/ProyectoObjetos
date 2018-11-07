@@ -8,13 +8,13 @@ namespace ProyectoObjetos
 
         private String nombre { get; set; }
         private int extension { get; set; }
-        private int edad { get; set; }
+        private int poblacion { get; set; }
 
-        public Ciudad(string nombre, int extension, int edad)
+        public Ciudad(string nombre, int extension, int poblacion)
         {
             this.nombre = nombre;
             this.extension = extension;
-            this.edad = edad;
+            this.poblacion = poblacion;
         }
     }
 }
