@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace ProyectoObjetos
@@ -9,119 +10,135 @@ namespace ProyectoObjetos
     {
 
 
-        List<Departamento> departamentos = new List<Departamento>();
-        List<Ciudad> ciudades = new List<Ciudad>();
-        List<Barrio> barrios = new List<Barrio>();
-        List<Persona> personas = new List<Persona>();
-
-
-
-        public void AgregarDepartamento(String nombre, String capital, int poblacion)
+        public void AgregarDepartamento(List<Departamento> departamentos, String nombre, String capital, int poblacion)
         {
             Departamento nuevoDepartamento = new Departamento(nombre, capital, poblacion);
             departamentos.Add(nuevoDepartamento);
 
         }
 
-        public void AgregarCiudad(String nombre, int extencion, int poblacion)
+        public void AgregarCiudad(List<Ciudad> ciudades, String nombre, int extencion, int poblacion)
         {
             Ciudad nuevaCiudad = new Ciudad(nombre, extencion, poblacion);
             ciudades.Add(nuevaCiudad);
 
         }
 
-        public void AgregarBarrio(String nombre, String localidad, int poblacion)
+        public void AgregarBarrio(List<Barrio> barrios, String nombre, String localidad, int poblacion)
         {
             Barrio nuevoBarrio = new Barrio(nombre, localidad, poblacion);
             barrios.Add(nuevoBarrio);
 
         }
 
-        public void AgregarPersona(String nombre, String profesion, int edad)
+        public void AgregarPersona(List<Persona> personas, String nombre, String profesion, int edad)
         {
             Persona nuevaPersona = new Persona(nombre, profesion, edad);
             personas.Add(nuevaPersona);
 
         }
 
-        public void EliminarDepartamento(int indexD)
+        public void EliminarDepartamento(List<Departamento> departamentos, int indexD)
         {
 
             departamentos.RemoveAt(indexD);
 
         }
 
-        public void EliminarCiudad(int indexC)
+        public void EliminarCiudad(List<Ciudad> ciudades, int indexC)
         {
             ciudades.RemoveAt(indexC);
 
         }
 
-        public void EliminarBarrio(int indexB)
+        public void EliminarBarrio(List<Barrio> barrios, int indexB)
         {
             barrios.RemoveAt(indexB);
 
         }
-        public void EliminarPersona(int indexP)
+        public void EliminarPersona(List<Persona> personas, int indexP)
         {
             personas.RemoveAt(indexP);
 
         }
 
-        public void VerDepartamentos()
+        public void VerDepartamentos(List<Departamento> departamentos)
         {
-            for (int i = 0; i <= departamentos.Count; i++)
+            if (departamentos.Count<1)
             {
-               Console.WriteLine(i+". "+departamentos[i]);
+                Console.WriteLine("la lista esta vacia");
+            }
+            else { 
+            for (int i = 0; i < departamentos.Count; i++)
+            {
+                Departamento departamento = departamentos[i];
+                Console.WriteLine(i+". "+departamento.nombre);
+            }
+            }
+        }
 
+        public void Verciudades(List<Ciudad> ciudades)
+        {
+            if (ciudades.Count < 1)
+            {
+                Console.WriteLine("la lista esta vacia");
+            }
+            else
+            {
+                for (int i = 0; i < ciudades.Count; i++)
+                {
+                    Ciudad ciudad = ciudades[i];
+                    Console.WriteLine(i + ". " + ciudad.nombre);
+                }
+            }
+        }
+
+        public void VerBarrios(List<Barrio> barrios)
+        {
+            if (barrios.Count < 1)
+            {
+                Console.WriteLine("la lista esta vacia");
+            }
+            else
+            {
+                for (int i = 0; i < barrios.Count; i++)
+                {
+                    Barrio barrio = barrios[i];
+                    Console.WriteLine(i + ". " + barrio.nombre);
+                }
+            }
+        }
+
+        public void VerPersonas(List<Persona> personas)
+        {
+            if (personas.Count < 1)
+            {
+                Console.WriteLine("la lista esta vacia");
+            }
+            else
+            {
+                for (int i = 0; i < personas.Count; i++)
+                {
+                    Persona persona = personas[i];
+                    Console.WriteLine(i + ". " + persona.nombre);
+                }
             }
 
         }
-
-        public void Verciudades()
-        {
-            for (int i = 0; i <= ciudades.Count; i++)
-            {
-                Console.WriteLine(ciudades[i]);
-
-            }
-
-        }
-
-        public void VerBarrios()
-        {
-            for (int i = 0; i <= barrios.Count; i++)
-            {
-                Console.WriteLine(barrios[i]);
-
-            }
-
-        }
-
-        public void VerPersonas()
-        {
-            for (int i = 0; i <= personas.Count; i++)
-            {
-                Console.WriteLine(personas[i]);
-
-            }
-
-        }
-
         public int MostrarPrimerMenu()
         {
             Console.WriteLine(@"Hola: que deseas hacer?
-                1. Ver Dertamentos
-                2. Ver Ciudades
-                3. Ver Barrios
-                4. Ver Barrios");
+                1. - Dertamentos -
+                2. - Ciudades -
+                3. - Barrios -
+                4. - Personas -
+                5. SALIR!!!");
             int opc = int.Parse(Console.ReadLine());
 
             return opc;
-            
+
         }
 
-
-        
     }
+
 }

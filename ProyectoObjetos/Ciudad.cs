@@ -6,9 +6,9 @@ namespace ProyectoObjetos
     {
         
 
-        private String nombre { get; set; }
-        private int extension { get; set; }
-        private int poblacion { get; set; }
+        public String nombre { get; set; }
+        public int extension { get; set; }
+        public int poblacion { get; set; }
 
         public Ciudad(string nombre, int extension, int poblacion)
         {

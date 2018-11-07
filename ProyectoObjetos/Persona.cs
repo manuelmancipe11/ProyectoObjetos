@@ -6,15 +6,15 @@ namespace ProyectoObjetos
 {
     public class Persona
     {
-        public Persona(string nombre, string profesion, int edad)
+        public Persona(string nombre, string profesion, int id)
         {
             this.nombre = nombre;
             this.profesion = profesion;
-            this.edad = edad;
+            this.id = id;
         }
 
-        private String nombre { get; set; }
-        private String profesion { get; set; }
-        private int edad { get; set; }
+        public String nombre { get; set; }
+        public String profesion { get; set; }
+        private int id { get; set; }
     }
 }

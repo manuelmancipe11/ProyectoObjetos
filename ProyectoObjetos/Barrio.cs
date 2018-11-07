@@ -7,9 +7,9 @@ namespace ProyectoObjetos
     public class Barrio
     {
 
-        private String nombre { get; set; }
-        private String localidad { get; set; }
-        private int poblacion { get; set; }
+        public String nombre { get; set; }
+        public String localidad { get; set; }
+        public int poblacion { get; set; }
 
         public Barrio(string nombre, string localidad, int poblacion)
         {

@@ -9,9 +9,9 @@ namespace ProyectoObjetos
     {
         
 
-        private String nombre { get; set; }
-        private String capital { get; set; }
-        private int poblacion { get; set; }
+        public String nombre { get; set; }
+        public String capital { get; set; }
+        public int poblacion { get; set; }
 
         public Departamento(string nombre, string capital, int poblacion)
         {
