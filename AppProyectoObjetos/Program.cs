@@ -34,7 +34,6 @@ namespace AppProyectoObjetos
                             String capital = Console.ReadLine();
                             Console.WriteLine("Ingrese numero de habitantes");
                             int poblacion = int.Parse(Console.ReadLine());
-
                             m.AgregarDepartamento(nombre, capital, poblacion);
                             break;
 
@@ -45,7 +44,6 @@ namespace AppProyectoObjetos
                             Console.WriteLine("digite el numero del departamento que desea eliminar");
                             int dptoEliminar = int.Parse(Console.ReadLine());                    
                             m.EliminarDepartamento(dptoEliminar);
-
                             break;
 
                         case 3:
@@ -74,13 +72,21 @@ namespace AppProyectoObjetos
                             Console.WriteLine(@"...CIUDADES...");
                             Console.WriteLine("Ingrese nombre de la Ciudad");
                             String nombre = Console.ReadLine();
-                            Console.WriteLine("Ingrese extension (en km²) de la ciudad");
-                            String capital = Console.ReadLine();
+                            Console.WriteLine("Ingrese extension (en km²)");
+                            int extension = int.Parse(Console.ReadLine());
                             Console.WriteLine("Ingrese numero de habitantes");
                             int poblacion = int.Parse(Console.ReadLine());
-
-                            m.AgregarDepartamento(nombre, capital, poblacion);
+                            m.AgregarCiudad(nombre, extension, poblacion);
                             break;
+
+                        case 2:
+                            Console.WriteLine(@"...CIUDADES...");
+                            m.Verciudades();
+                            Console.WriteLine("digite el numero de la ciudad que desea eliminar");
+                            int ciudadEliminar = int.Parse(Console.ReadLine());
+                            m.EliminarCiudad(ciudadEliminar);
+                            break;
+
 
                     }
 
