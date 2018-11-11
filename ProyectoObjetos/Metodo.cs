@@ -8,7 +8,15 @@ namespace ProyectoObjetos
 {
     public class Metodo
     {
-
+        public bool NumberValidation(int entrada)
+        {
+            bool esEntero = Int32.TryParse(Console.ReadLine(), out entrada);
+            if (!esEntero)
+            {
+                return false;
+            }
+            return true;
+        }
 
         public void AgregarDepartamento(List<Departamento> departamentos, String nombre, String capital, int poblacion)
         {
@@ -134,6 +142,7 @@ namespace ProyectoObjetos
                 4. - Personas -
                 5. SALIR!!!");
             int opc = int.Parse(Console.ReadLine());
+           
 
             return opc;
 
