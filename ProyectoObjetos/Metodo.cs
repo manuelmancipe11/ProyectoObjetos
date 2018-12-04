@@ -80,7 +80,7 @@ namespace ProyectoObjetos
             for (int i = 0; i < departamentos.Count; i++)
             {
                 Departamento departamento = departamentos[i];
-                Console.WriteLine(i+". "+departamento.nombre);
+                Console.WriteLine(i+". Departamento: "+departamento.nombre+"/t  Capital: "+departamento.capital+" Habitantes: "+departamento.poblacion);
             }
             }
         }
